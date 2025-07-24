@@ -1,13 +1,19 @@
-import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router';
+import { PersistGate } from 'redux-persist/integration/react';
 
-import ApplicationRoot from './ApplicationRoute';
+import ApplicationRoot from './ApplicationRoot';
 
-const Application = () => {
-  return (
-    <BrowserRouter>
-      <ApplicationRoot />
-    </BrowserRouter>
-  );
-};
+import { store, persistor } from 'Redux';
+
+const Application = () => (
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <BrowserRouter>
+        <ApplicationRoot />
+      </BrowserRouter>
+    </PersistGate>
+  </Provider>
+);
 
 export default Application;

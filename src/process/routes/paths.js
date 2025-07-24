@@ -1,24 +1,9 @@
-import Pages from 'Pages';
-import Paths from './paths';
+// Public Paths
 
-// public routes
-const NotFound = {
-  component: Pages.public.NotFound,
-  path: Paths.public.NOT_FOUND,
-};
+// Private Paths
 
-const LandingPage = {
-  component: Pages.public.LandingPage,
-  path: Paths.public.LANDING_PAGE,
-};
+const publicPaths = {};
 
-const LoadingScreen = {
-  component: Pages.public.LoadingScreen,
-  path: Paths.public.LOADING_SCREEN,
-};
+const privatePaths = {};
 
-const publicRoutes = [LandingPage, LoadingScreen, NotFound];
-
-export { publicRoutes };
-
-export default { publicRoutes };
+export default { public: publicPaths, private: privatePaths };

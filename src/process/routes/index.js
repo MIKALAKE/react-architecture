@@ -1,14 +1,14 @@
-// Public Paths
-const LANDING_PAGE = '/';
+import Pages from 'Pages';
+import Paths from './paths';
 
-const NOT_FOUND = '/not-found';
+// public routes
 
-// Private Paths
+// private routes
 
-const publicPaths = {
-  DEFAULT_PATH: LANDING_PAGE,
-  LANDING_PAGE,
-  NOT_FOUND,
-};
+const publicRoutes = [];
 
-export default { public: publicPaths };
+const privateRoutes = [];
+
+export { publicRoutes, privateRoutes };
+
+export default { publicRoutes, privateRoutes };

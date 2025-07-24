@@ -1,12 +1,16 @@
 import I18n from 'i18next';
 
-import en from './en';
+import rs from './rs';
+import hu from './hu';
 
 I18n.init({
   resources: {
-    en,
+    rs,
+    hu,
   },
   lng: localStorage.getItem('language'),
+  fallbackLng: 'rs',
+  whitelist: ['rs'],
 });
 
 export default I18n;
